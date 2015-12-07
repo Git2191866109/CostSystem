@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+
+	<!-- 别名 定义 -->
+	<typeAliases>
+		<!-- 批量别名定义，指定扫描包路径，自动将包下边的pojo定义别名， 别名为类名（第一个字母小写和大写都可以） -->
+		<package name="com.lover.costsystem.domain" />
+	</typeAliases>
+
+	<!-- 加载mapper.xml -->
+	<mappers>
+		<!-- 加载旧的映射文件，user.xml -->
+		<mapper resource="com/lover/costsystem/dao/mapper/UserMapper.xml" />
+	</mappers>
+
+</configuration>

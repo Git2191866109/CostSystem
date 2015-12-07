@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.lover.cost.mapper.UserMapper">
+	<resultMap id="BaseResultMap" type="User">
+		<result column="id" property="id" jdbcType="INTEGER" />
+		<result column="uuid" property="uuid" jdbcType="VARCHAR" />
+		<result column="username" property="userName" jdbcType="VARCHAR" />
+		<result column="password" property="passWord" jdbcType="VARCHAR" />
+	</resultMap>
+
+	<sql id="tableName"> l_cost_user </sql>
+
+	<insert id="insert" parameterType="User" useGeneratedKeys="true" keyProperty="id">
+		insert into
+		<include refid="tableName" />
+		(uuid,username,password)
+		values
+		(
+		UUID(),
+		#{userName,jdbcType=VARCHAR},
+		#{passWord,jdbcType=VARCHAR}
+		)
+	</insert>
+
+	<update id="update" parameterType="User">
+		update 
+		<include refid="tableName" />
+		set
+		userName=#{userName,jdbcType=VARCHAR},
+		passWord=#{passWord,jdbcType=VARCHAR}
+		where uuid=#{uuid,jdbcType=VARCHAR}
+	</update>
+	
+	<select id="selectByUUID" parameterType="String" resultMap="BaseResultMap">
+		select * from
+		<include refid="tableName" />
+		where uuid=#{uuid,jdbcType=VARCHAR}
+	</select>
+	
+	<select id="selectAll" resultMap="BaseResultMap">
+		select * from
+		<include refid="tableName" />
+	</select>
+	
+	<delete id="deleteByUUID" parameterType="String">
+		select * from
+		<include refid="tableName" />
+		where uuid=#{uuid,jdbcType=VARCHAR}
+	</delete>
+
+</mapper>
