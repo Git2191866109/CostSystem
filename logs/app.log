@@ -1,0 +1,9 @@
+2015-12-25T18:01:25,461 [main] DEBUG D o.a.i.l.LogFactory:135 setImplementation - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+2015-12-25T18:04:56,063 [main] DEBUG D o.m.s.SqlSessionUtils:99 getSqlSession - Creating a new SqlSession
+2015-12-25T18:04:56,094 [main] DEBUG D o.m.s.SqlSessionUtils:150 registerSessionHolder - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5226e402] was not registered for synchronization because synchronization is not active
+2015-12-25T18:04:56,271 [main] INFO  I c.a.d.p.DruidDataSource:106 info - {dataSource-1} inited
+2015-12-25T18:04:56,683 [main] DEBUG D o.m.s.t.SpringManagedTransaction:87 openConnection - JDBC Connection [com.mysql.jdbc.JDBC4Connection@24a298a6] will not be managed by Spring
+2015-12-25T18:04:56,746 [main] DEBUG D c.l.c.m.U.insert:142 debug - ==>  Preparing: insert into l_cost_user (uuid,username,password) values ( UUID(), ?, ? ) 
+2015-12-25T18:04:57,109 [main] DEBUG D c.l.c.m.U.insert:142 debug - ==> Parameters: ss(String), null
+2015-12-25T18:04:57,155 [main] DEBUG D o.m.s.SqlSessionUtils:193 closeSqlSession - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5226e402]
+2015-12-25T18:05:17,921 [Thread-1] INFO  I c.a.d.p.DruidDataSource:106 info - {dataSource-1} closed
