@@ -4,17 +4,20 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
+import org.springframework.test.context.junit4.AbstractJUnit4SpringContextTests;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import com.google.gson.Gson;
 import com.lover.cost.domain.User;
 import com.lover.cost.service.UserService;
 
+import java.time.Instant;
+
 @RunWith(SpringJUnit4ClassRunner.class)
 //// 用于配置spring中测试的环境
-//@ContextConfiguration(locations = "classpath:/application-context.xml")
+@ContextConfiguration(locations = "classpath:application-context.xml")
 // 用于指定配置文件所在的位置
-public class UserTest {
+public class UserTest extends AbstractJUnit4SpringContextTests {
 	@Autowired
 	private UserService userService;
 
@@ -25,6 +28,10 @@ public class UserTest {
 	@Test
 	public void testSaveUser() {
 		User user = new User();
+		user.setUserName("ss");
+		user.setCreateTime(Instant.now());
+		userService.save(user);
+
 	}
 
 }
