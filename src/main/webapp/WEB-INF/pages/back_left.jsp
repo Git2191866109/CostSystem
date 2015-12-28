@@ -29,7 +29,7 @@
 
         <!--开始左侧的栏目-->
         <li class="start active ">
-            <a href="#">
+            <a href="http://localhost:8080/goto/user/indexuser.do">
                 <i class="icon-home"></i>
                 <span class="title">Dashboard首页</span>
                 <span class="selected"></span>
