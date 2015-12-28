@@ -1,7 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" isELIgnored="false"%>
 <%@ include file="common/jsp/tag.jsp"%>
-<jsp:include page="${base}common/jsp/common.jsp"></jsp:include>
+<jsp:include page="${base}common/jsp/common_front.jsp"></jsp:include>
 <html lang="en">
 <head>
 <meta charset="utf-8">
@@ -10,13 +10,14 @@
 <title>Login</title>
 </head>
 <body>
+
 <!-- begin login -->
 	<div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel">
 	  <div class="modal-dialog" role="document">
 	    <div class="modal-content">
 	      <div class="modal-header">
 	        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-	        <h4 class="modal-title" id="loginModalLabel">欢迎登录</h4>
+	        <h4 class="modal-title" id="loginModalLabel">欢迎登录${base}</h4>
 	      </div>
 	      <div class="modal-body">
 	        <form class="form-horizontal">

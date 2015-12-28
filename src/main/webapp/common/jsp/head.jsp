@@ -5,7 +5,8 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="shortcut icon" href="${base}/common/img/ico/favicon.png" type=”image/x-icon” />
+	<script src="${base}/common/js/jquery.backstretch.min.js"></script>
+	<script src="${base}/common/js/scripts.js"></script>
 <title>costsystem</title>
 </head>
 <body>
