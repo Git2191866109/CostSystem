@@ -7,20 +7,22 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%
-  String path = request.getContextPath();
-  String basePath = request.getScheme() +"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
-  request.setAttribute("base",basePath);
+    String path = request.getContextPath();
+    String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + path + "/";
+    request.setAttribute("base", basePath);
 %>
 <!-- CSS -->
 <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500">
-<link rel="stylesheet" href="${base}/common/assets/bootstrap/css/bootstrap.min.css">
-<link rel="stylesheet" href="${base}/common/assets/font-awesome/css/font-awesome.min.css">
-<%-- <link rel="stylesheet" href="${base}/common/assets/css/form-elements.css"> --%>
-<link rel="stylesheet" href="${base}/common/assets/css/style.css">
+<link rel="stylesheet" href="${base}/common/css/bootstrap.min.css">
+<link rel='stylesheet' href='${base}/common/css/fullcalendar.min.css' />
 <!-- Javascript -->
-<script src="${base}/common/assets/js/jquery-1.11.1.min.js"></script>
-<script src="${base}/common/assets/bootstrap/js/bootstrap.min.js"></script>
-<script src="${base}/common/assets/js/jquery.backstretch.min.js"></script>
-<script src="${base}/common/assets/js/scripts.js"></script>
+<script src="${base}/common/js/jquery-1.11.1.min.js"></script>
+<script src="${base}/common/js/bootstrap.min.js"></script>
+<%--<script src="${base}/common/js/jquery.backstretch.min.js"></script>--%>
+<%--<script src="${base}/common/js/scripts.js"></script>--%>
+<script src='${base}/common/js/moment.min.js'></script><!-- jquery.js 和 moment.js必须在fullcalendar.js前 -->
+<script src='${base}/common/js/fullcalendar.js'></script>
+<script type='text/javascript' src='${base}/common/js/gcal.js'></script>
+<script type='text/javascript' src='${base}/common/js/jquery.fancybox-1.3.1.pack.js'></script>
 <!-- jsp -->
-<jsp:include page="head.jsp"></jsp:include>
+<%--<jsp:include page="head.jsp"></jsp:include>--%>

@@ -7,3 +7,18 @@
 2015-12-25T18:04:57,109 [main] DEBUG D c.l.c.m.U.insert:142 debug - ==> Parameters: ss(String), null
 2015-12-25T18:04:57,155 [main] DEBUG D o.m.s.SqlSessionUtils:193 closeSqlSession - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5226e402]
 2015-12-25T18:05:17,921 [Thread-1] INFO  I c.a.d.p.DruidDataSource:106 info - {dataSource-1} closed
+2015-12-25T18:41:59,205 [main] ERROR E c.t.LogTest:28 hello - 错误信息：Did it again!
+2015-12-25T18:41:59,209 [main] INFO  I c.t.LogTest:29 hello - 我是info信息： 输出一下你感兴趣的或者重要的信息，这个用的最多了。
+2015-12-25T18:41:59,210 [main] DEBUG D c.t.LogTest:30 hello - 我是debug信息：一般就只用这个作为最低级别，trace压根不用
+2015-12-25T18:41:59,212 [main] WARN  W c.t.LogTest:31 hello - 我是warn信息:
+2015-12-25T18:41:59,213 [main] FATAL F c.t.LogTest:32 hello - 我是fatal信息:级别比较高了。重大错误
+2015-12-25T18:41:59,214 [main] DEBUG D c.t.LogTest:33 hello - 我是debug信息
+2015-12-25T18:41:59,215 [main] ERROR E c.t.LogTest:41 testHello - hello
+2015-12-28T08:59:54,165 [main] DEBUG D o.a.i.l.LogFactory:135 setImplementation - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+2015-12-28T08:59:57,586 [main] DEBUG D o.m.s.SqlSessionUtils:99 getSqlSession - Creating a new SqlSession
+2015-12-28T08:59:57,594 [main] DEBUG D o.m.s.SqlSessionUtils:150 registerSessionHolder - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5488b5c5] was not registered for synchronization because synchronization is not active
+2015-12-28T08:59:57,694 [main] INFO  I c.a.d.p.DruidDataSource:106 info - {dataSource-1} inited
+2015-12-28T08:59:58,220 [main] DEBUG D o.m.s.t.SpringManagedTransaction:87 openConnection - JDBC Connection [com.mysql.jdbc.JDBC4Connection@6872f9c8] will not be managed by Spring
+2015-12-28T08:59:58,229 [main] DEBUG D c.l.c.m.U.insert:142 debug - ==>  Preparing: insert into l_cost_user (uuid,username,password) values ( UUID(), ?, ? ) 
+2015-12-28T08:59:58,270 [main] DEBUG D c.l.c.m.U.insert:142 debug - ==> Parameters: ss(String), null
+2015-12-28T08:59:58,300 [main] DEBUG D o.m.s.SqlSessionUtils:193 closeSqlSession - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5488b5c5]
